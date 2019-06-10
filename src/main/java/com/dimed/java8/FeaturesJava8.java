@@ -34,7 +34,7 @@ public class FeaturesJava8 {
         listPerson.addAll(Arrays.asList());
         System.out.println(listPerson);
         System.out.println("#####################");
-        menuOpcoes.showOptions();
+        menuOpcoes.subMenuFeaturesJava8();
     }
 
 
