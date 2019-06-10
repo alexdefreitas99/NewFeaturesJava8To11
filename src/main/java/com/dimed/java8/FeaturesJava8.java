@@ -12,37 +12,28 @@ public class FeaturesJava8 {
     MenuOpcoes menuOpcoes = new MenuOpcoes();
     PersonService personService = new PersonService();
 
-
     public void featureLambda() {
-//        returnPersonList().forEach(eachPerson -> System.out.println(eachPerson));
-
+        // returnPersonList().forEach(eachPerson -> System.out.println(eachPerson));
         System.out.println("#####################");
         System.out.println("Lambda new feature implemented in java 8");
-
         personService.returnPersonList().stream().filter(
                 p -> p.getGender() == Person.Sex.MALE
                         && p.getName() == "alex"
         ).map(p -> p.getEmailAddress())
-                .forEach(email -> System.out.println(email));
-
+                .forEach(System.out::println);
         System.out.println("#####################");
-        menuOpcoes.showOptions();
-
+        menuOpcoes.subMenuFeaturesJava8();
     }
 
     public void featureImprovedTypeReference() {
         // in java < 8
         // listPerson.addAll(Arrays.<Person>asList());
         System.out.println("#####################");
-
-
         System.out.println("Type Improvement Java 8");
-
         List<Person> listPerson = personService.returnPersonList();
         listPerson.addAll(Arrays.asList());
         System.out.println(listPerson);
         System.out.println("#####################");
-
         menuOpcoes.showOptions();
     }
 

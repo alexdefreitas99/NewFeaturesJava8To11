@@ -11,6 +11,7 @@ public class MenuOpcoes {
 
     public void showOptions() {
 
+        System.out.println("Menu");
         System.out.println("Select an option");
         System.out.println("1 - For java 8");
         System.out.println("2 - For java 9");
@@ -19,28 +20,16 @@ public class MenuOpcoes {
 
         switch (new Scanner(System.in).nextInt()) {
             case 1:
-                System.out.println("New FeaturesJava8 Java 8");
-                System.out.println("1 - Feature (Lambda)");
-                System.out.println("2 - Feature (Improvement Improved Type Reference)");
-                subMenuFeaturesJava8(new Scanner(System.in).nextInt());
+                subMenuFeaturesJava8();
                 break;
             case 2:
-                System.out.println("New FeaturesJava8 Java 9");
-                System.out.println("1 - Feature 1 (Underscore not legal character name)");
-                System.out.println("2 - Feature 2");
-                subMenuFeaturesJava9(new Scanner(System.in).nextInt());
+                subMenuFeaturesJava9();
                 break;
             case 3:
-                System.out.println("New FeaturesJava8 Java 10");
-                System.out.println("1 - Feature 1");
-                System.out.println("2 - Feature 2");
-                subMenuFeaturesJava10(new Scanner(System.in).nextInt());
+                subMenuFeaturesJava10();
                 break;
             case 4:
-                System.out.println("New FeaturesJava8 Java 11");
-                System.out.println("1 - Feature 1");
-                System.out.println("2 - Feature 2");
-                subMenuFeaturesJava11(new Scanner(System.in).nextInt());
+                subMenuFeaturesJava11();
                 break;
             default:
                 System.out.println("Nenhuma opção válida selecionada");
@@ -49,9 +38,12 @@ public class MenuOpcoes {
         }
     }
 
-    public void subMenuFeaturesJava8(int number) {
+    public void subMenuFeaturesJava8() {
         FeaturesJava8 featuresJava8 = new FeaturesJava8();
-        switch (number) {
+        System.out.println("New FeaturesJava8 Java 8");
+        System.out.println("1 - Feature (Lambda)");
+        System.out.println("2 - Feature (Improvement Improved Type Reference)");
+        switch (new Scanner(System.in).nextInt()) {
             case 1:
                 featuresJava8.featureLambda();
                 break;
@@ -66,9 +58,13 @@ public class MenuOpcoes {
         }
     }
 
-    public void subMenuFeaturesJava9(int number) {
+    public void subMenuFeaturesJava9() {
         FeaturesJava9 featuresJava9 = new FeaturesJava9();
-        switch (number) {
+
+        System.out.println("New Features Java 9");
+        System.out.println("1 - Feature 1 (Underscore not legal character name)");
+        System.out.println("2 - Feature 2");
+        switch (new Scanner(System.in).nextInt()) {
             case 1:
                 featuresJava9.featureUnderscore();
                 break;
@@ -82,9 +78,12 @@ public class MenuOpcoes {
         }
     }
 
-    public void subMenuFeaturesJava10(int number) {
+    public void subMenuFeaturesJava10() {
         FeaturesJava10 featuresJava10 = new FeaturesJava10();
-        switch (number) {
+        System.out.println("New FeaturesJava8 Java 10");
+        System.out.println("1 - Feature 1");
+        System.out.println("2 - Feature 2");
+        switch (new Scanner(System.in).nextInt()) {
             case 1:
                 featuresJava10.addedVarVariable();
                 break;
@@ -99,14 +98,17 @@ public class MenuOpcoes {
     }
 
 
-    public void subMenuFeaturesJava11(int number) {
+    public void subMenuFeaturesJava11() {
         FeaturesJava11 featuresJava11 = new FeaturesJava11();
-        switch (number) {
+        System.out.println("New FeaturesJava8 Java 11");
+        System.out.println("1 - Feature 1");
+        System.out.println("2 - Feature 2");
+        switch (new Scanner(System.in).nextInt()) {
             case 1:
                 featuresJava11.newCollectionToArray();
                 break;
             case 2:
-                System.out.println("New Feature Java 11");
+                featuresJava11.varLambda();
                 break;
             default:
                 System.out.println("Nenhuma opção válida selecionada");
