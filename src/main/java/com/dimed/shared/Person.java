@@ -1,4 +1,4 @@
-package com.dimed.java8;
+package com.dimed.shared;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,8 +17,8 @@ public class Person {
         MALE, FEMALE
     }
 
-    String name;
-    Sex gender;
-    String emailAddress;
+    public String name;
+    public Sex gender;
+    public String emailAddress;
 
 }

@@ -1,5 +1,7 @@
 package com.dimed.initializer;
 
+import com.dimed.java10.FeaturesJava10;
+import com.dimed.java11.FeaturesJava11;
 import com.dimed.java8.FeaturesJava8;
 import com.dimed.java9.FeaturesJava9;
 
@@ -81,12 +83,13 @@ public class MenuOpcoes {
     }
 
     public void subMenuFeaturesJava10(int number) {
+        FeaturesJava10 featuresJava10 = new FeaturesJava10();
         switch (number) {
             case 1:
-                System.out.println("New Feature Java 10");
+                featuresJava10.addedVarVariable();
                 break;
             case 2:
-                System.out.println("New Feature Java 10");
+                featuresJava10.optionalElseThrow();
                 break;
             default:
                 System.out.println("Nenhuma opção válida selecionada");
@@ -97,9 +100,10 @@ public class MenuOpcoes {
 
 
     public void subMenuFeaturesJava11(int number) {
+        FeaturesJava11 featuresJava11 = new FeaturesJava11();
         switch (number) {
             case 1:
-                System.out.println("New Feature Java 11");
+                featuresJava11.newCollectionToArray();
                 break;
             case 2:
                 System.out.println("New Feature Java 11");
