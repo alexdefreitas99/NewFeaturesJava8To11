@@ -30,10 +30,12 @@ public class FeaturesJava8 {
         return personList;
     }
 
-    public void FeatureLambda() {
+    public void featureLambda() {
 //        returnPersonList().forEach(eachPerson -> System.out.println(eachPerson));
 
         System.out.println("#####################");
+        System.out.println("Lambda new feature implemented in java 8");
+
 
         returnPersonList().stream().filter(
                 p -> p.getGender() == Person.Sex.MALE
@@ -42,17 +44,24 @@ public class FeaturesJava8 {
                 .forEach(email -> System.out.println(email));
 
         System.out.println("#####################");
-        menuOpcoes.exibirOpcoesPrincipais();
+        menuOpcoes.showOptions();
 
     }
 
-    public void FeatureImprovedTypeReference(){
+    public void featureImprovedTypeReference(){
         // in java < 8
         // listPerson.addAll(Arrays.<Person>asList());
+        System.out.println("#####################");
+
+
+        System.out.println("Type Improvement Java 8");
+
         List <Person>  listPerson = returnPersonList();
         listPerson.addAll(Arrays.asList());
         System.out.println(listPerson);
-        menuOpcoes.exibirOpcoesPrincipais();
+        System.out.println("#####################");
+
+        menuOpcoes.showOptions();
     }
 
 

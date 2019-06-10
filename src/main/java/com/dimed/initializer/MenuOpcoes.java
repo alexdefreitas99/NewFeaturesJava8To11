@@ -1,18 +1,19 @@
 package com.dimed.initializer;
 
 import com.dimed.java8.FeaturesJava8;
+import com.dimed.java9.FeaturesJava9;
 
 import java.util.Scanner;
 
 public class MenuOpcoes {
 
-    public void exibirOpcoesPrincipais() {
+    public void showOptions() {
 
-        System.out.println("Escolha uma opcao");
-        System.out.println("1 - Para java 8");
-        System.out.println("2 - Para java 9");
-        System.out.println("3 - Para java 10");
-        System.out.println("4 - Para java 11");
+        System.out.println("Select an option");
+        System.out.println("1 - For java 8");
+        System.out.println("2 - For java 9");
+        System.out.println("3 - For java 10");
+        System.out.println("4 - For java 11");
 
         switch (new Scanner(System.in).nextInt()) {
             case 1:
@@ -23,7 +24,7 @@ public class MenuOpcoes {
                 break;
             case 2:
                 System.out.println("New FeaturesJava8 Java 9");
-                System.out.println("1 - Feature 1");
+                System.out.println("1 - Feature 1 (Underscore not legal character name)");
                 System.out.println("2 - Feature 2");
                 subMenuFeaturesJava9(new Scanner(System.in).nextInt());
                 break;
@@ -42,7 +43,7 @@ public class MenuOpcoes {
             default:
                 System.out.println("Nenhuma opção válida selecionada");
                 System.out.println("================================");
-                exibirOpcoesPrincipais();
+                showOptions();
         }
     }
 
@@ -50,32 +51,32 @@ public class MenuOpcoes {
         FeaturesJava8 featuresJava8 = new FeaturesJava8();
         switch (number) {
             case 1:
-                System.out.println("Lambda new feature implemented in java 8");
-                featuresJava8.FeatureLambda();
+                featuresJava8.featureLambda();
                 break;
             case 2:
-                System.out.println("Type Improvement Java 8");
-                featuresJava8.FeatureImprovedTypeReference();
+                featuresJava8.featureImprovedTypeReference();
                 break;
             default:
+                System.out.println("================================");
                 System.out.println("Nenhuma opção válida selecionada");
                 System.out.println("================================");
-                exibirOpcoesPrincipais();
+                showOptions();
         }
     }
 
     public void subMenuFeaturesJava9(int number) {
+        FeaturesJava9 featuresJava9 = new FeaturesJava9();
         switch (number) {
             case 1:
-                System.out.println("New Feature Java 9");
+                featuresJava9.featureUnderscore();
                 break;
             case 2:
-                System.out.println("New Feature Java 9");
+                featuresJava9.featurePrivateMethodsInInterface();
                 break;
             default:
                 System.out.println("Nenhuma opção válida selecionada");
                 System.out.println("================================");
-                exibirOpcoesPrincipais();
+                showOptions();
         }
     }
 
@@ -90,7 +91,7 @@ public class MenuOpcoes {
             default:
                 System.out.println("Nenhuma opção válida selecionada");
                 System.out.println("================================");
-                exibirOpcoesPrincipais();
+                showOptions();
         }
     }
 
@@ -106,7 +107,7 @@ public class MenuOpcoes {
             default:
                 System.out.println("Nenhuma opção válida selecionada");
                 System.out.println("================================");
-                exibirOpcoesPrincipais();
+                showOptions();
         }
     }
 
