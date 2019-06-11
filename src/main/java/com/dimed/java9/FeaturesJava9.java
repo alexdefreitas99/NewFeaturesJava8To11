@@ -1,6 +1,10 @@
 package com.dimed.java9;
 
 import com.dimed.initializer.MenuOpcoes;
+import com.dimed.shared.Person;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FeaturesJava9 {
 
@@ -17,6 +21,22 @@ public class FeaturesJava9 {
         // uncomment the line below
         // string _ = "Warning java 9 don't accept";
         menuOpcoes.subMenuFeaturesJava9();
+
+    }
+
+    public void diamondOperatorWithAnonymousClasses() {
+        System.out.println("#####################");
+        System.out.println("Var Feature Java 10");
+        System.out.println("In java < 9");
+        System.out.println("List<Person> personList = new ArrayList<Person>()");
+        System.out.println("In java >= 9");
+        System.out.println("List<Person> personList = new ArrayList<>()");
+        List<Person> personList = new ArrayList<>();
+        Person person = new Person();
+        person.name =  "Alex";
+        personList.add(person);
+        System.out.println(personList);
+        System.out.println("#####################");
 
     }
 
