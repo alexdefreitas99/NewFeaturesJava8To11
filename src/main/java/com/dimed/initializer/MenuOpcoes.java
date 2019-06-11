@@ -62,11 +62,11 @@ public class MenuOpcoes {
         FeaturesJava9 featuresJava9 = new FeaturesJava9();
 
         System.out.println("New Features Java 9");
-        System.out.println("1 - Feature 1 (Underscore not legal character name)");
-        System.out.println("2 - Feature 2");
+        System.out.println("1 - Feature 1 (Diamond with Anonymous Classes)");
+        System.out.println("2 - Feature 2 (Private Methods In Interface)");
         switch (new Scanner(System.in).nextInt()) {
             case 1:
-                featuresJava9.featureUnderscore();
+                featuresJava9.diamondOperatorWithAnonymousClasses();
                 break;
             case 2:
                 featuresJava9.featurePrivateMethodsInInterface();
@@ -81,8 +81,8 @@ public class MenuOpcoes {
     public void subMenuFeaturesJava10() {
         FeaturesJava10 featuresJava10 = new FeaturesJava10();
         System.out.println("New FeaturesJava8 Java 10");
-        System.out.println("1 - Feature 1");
-        System.out.println("2 - Feature 2");
+        System.out.println("1 - Feature 1 (Var Variable)");
+        System.out.println("2 - Feature 2 ( Get vs ElseThrow )");
         switch (new Scanner(System.in).nextInt()) {
             case 1:
                 featuresJava10.addedVarVariable();
@@ -101,8 +101,8 @@ public class MenuOpcoes {
     public void subMenuFeaturesJava11() {
         FeaturesJava11 featuresJava11 = new FeaturesJava11();
         System.out.println("New FeaturesJava8 Java 11");
-        System.out.println("1 - Feature 1");
-        System.out.println("2 - Feature 2");
+        System.out.println("1 - Feature 1 (ToArray)");
+        System.out.println("2 - Feature 2 (Var in lambda)");
         switch (new Scanner(System.in).nextInt()) {
             case 1:
                 featuresJava11.newCollectionToArray();
