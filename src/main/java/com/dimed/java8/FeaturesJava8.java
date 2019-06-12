@@ -31,7 +31,7 @@ public class FeaturesJava8 {
         System.out.println("#####################");
         System.out.println("Type Improvement Java 8");
         List<Person> listPerson = personService.returnPersonList();
-        listPerson.addAll(Arrays.asList());
+        listPerson.addAll(Arrays.asList(personService.returnPersonTest()));
         System.out.println(listPerson);
         System.out.println("#####################");
         menuOpcoes.subMenuFeaturesJava8();
